@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gallon *.css
+recursive-include gallon *.csv
+recursive-include gallon *.html
+recursive-include gallon *.ico
+recursive-include gallon *.js
+recursive-include gallon *.json
+recursive-include gallon *.md
+recursive-include gallon *.png
+recursive-include gallon *.py
+recursive-include gallon *.svg
+recursive-include gallon *.txt
+recursive-exclude gallon *.pyc
