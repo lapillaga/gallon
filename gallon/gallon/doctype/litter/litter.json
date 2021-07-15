@@ -7,7 +7,8 @@
  "field_order": [
   "arrived_at",
   "quantity",
-  "observation"
+  "observation",
+  "code"
  ],
  "fields": [
   {
@@ -27,11 +28,17 @@
    "fieldtype": "Int",
    "label": "Cantidad",
    "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo camada",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-12 15:06:37.474548",
+ "modified": "2021-07-15 16:05:44.166053",
  "modified_by": "Administrator",
  "module": "Gallon",
  "name": "Litter",
