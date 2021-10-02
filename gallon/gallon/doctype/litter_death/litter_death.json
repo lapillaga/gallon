@@ -1,33 +1,47 @@
 {
  "actions": [],
- "autoname": "format:CA-{DD}-{MM}-{YY}",
- "creation": "2021-06-27 23:45:16.879727",
+ "creation": "2021-09-21 00:15:05.753192",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "general_info",
-  "supplier",
-  "arrived_at",
+  "death_info",
+  "litter",
+  "dead_at",
   "column_break_1",
   "quantity",
-  "received_by",
+  "user",
   "aditional_info",
   "observation"
  ],
  "fields": [
   {
-   "fieldname": "arrived_at",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Fecha llegada",
-   "reqd": 1
+   "fieldname": "death_info",
+   "fieldtype": "Section Break",
+   "label": "Informaci\u00f3n muerte"
   },
   {
    "allow_in_quick_entry": 1,
-   "fieldname": "observation",
-   "fieldtype": "Text Editor",
-   "label": "Observaci\u00f3n"
+   "fieldname": "litter",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Camada",
+   "options": "Litter",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "dead_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Fecha muerte",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
@@ -40,43 +54,32 @@
   },
   {
    "allow_in_quick_entry": 1,
-   "fieldname": "received_by",
-   "fieldtype": "Table MultiSelect",
-   "label": "Recibido por",
-   "options": "Litter Received",
-   "reqd": 1
-  },
-  {
-   "fieldname": "supplier",
+   "fieldname": "user",
    "fieldtype": "Link",
+   "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Proveedor",
-   "options": "Supplier",
+   "in_standard_filter": 1,
+   "label": "Encontrado por",
+   "options": "User",
    "reqd": 1
-  },
-  {
-   "fieldname": "general_info",
-   "fieldtype": "Section Break",
-   "label": "Informaci\u00f3n general",
-   "options": "fas fa-folder"
-  },
-  {
-   "fieldname": "column_break_1",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "aditional_info",
    "fieldtype": "Section Break",
    "label": "Informaci\u00f3n adicional"
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Text Editor",
+   "label": "Observaci\u00f3n"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-01 18:56:27.038242",
+ "modified": "2021-10-01 19:10:40.837059",
  "modified_by": "Administrator",
  "module": "Gallon",
- "name": "Litter",
- "name_case": "UPPER CASE",
+ "name": "Litter Death",
  "owner": "Administrator",
  "permissions": [
   {
@@ -95,7 +98,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "arrived_at",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1
